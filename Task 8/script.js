@@ -14,3 +14,22 @@ const introduction = person1.introduce();
 Grąžinama reikšmė:
 'Pavadinimas: John, Amžius: 30, Lytis: Vyras'
 ------------------------------------------------------------------------------------ */
+
+class Person {
+  constructor(name, age, gender) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+  }
+  introduce() {
+    console.log(
+      `Vardas: ${this.name}, Amžius: ${this.age}, Lytis: ${this.gender}`
+    );
+    return `Vardas: ${this.name}, Amžius: ${this.age}, Lytis: ${this.gender}`;
+  }
+}
+const person1 = new Person("Jonas", 33, "Vyras");
+const introduction = person1.introduce();
+
+const person2 = new Person("Ona", 69, "Moteris");
+const introduction2 = person2.introduce();

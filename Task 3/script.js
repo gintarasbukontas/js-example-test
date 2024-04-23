@@ -11,3 +11,37 @@
 
 // API endpoint'as:
 // const ENDPOINT = 'https://jsonplaceholder.typicode.com/posts';
+
+const output = document.querySelector("#output");
+const messagePlaceholder = document.querySelector("#message");
+const btn = document.querySelector("#btn");
+
+async function getMessages() {
+  const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const messages = response.json();
+  return messages;
+}
+
+async function showMessages() {
+  const messages = await getMessages();
+
+  messagePlaceholder.remove();
+
+  messages.forEach((message) => {
+    const messageHolder = document.createElement("div");
+    output.append(messageHolder);
+    messageHolder.classList.add("messageHolder");
+
+    const title = document.createElement("p");
+    messageHolder.append(title);
+    title.classList.add("title");
+    title.textContent = `Title: ${message.title}`;
+
+    const body = document.createElement("p");
+    messageHolder.append(body);
+    body.classList.add("body");
+    body.textContent = `Body: ${message.body}`;
+  });
+}
+
+btn.addEventListener("click", showMessages);

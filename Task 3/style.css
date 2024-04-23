@@ -59,3 +59,14 @@
   border-radius: 5px;
   background-color: #fff;
 }
+
+.title{
+  font-weight: bold;
+}
+
+.messageHolder{
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  margin-bottom: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+}

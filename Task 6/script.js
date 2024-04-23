@@ -17,3 +17,19 @@ const employees = [
   { id: "8", name: "Grace Lee", age: 32, salary: 58000 },
   { id: "9", name: "Henry Wilson", age: 27, salary: 51000 },
 ];
+
+function getTotalSalary(employees) {
+  let sum = 0;
+
+  employees.forEach((employee) => {
+    sum += employee.salary;
+  });
+  return sum;
+}
+console.log(getTotalSalary(employees));
+
+function getJuniorEmployees(employees) {
+  const juniors = employees.filter((x) => x.age < 30);
+  return juniors;
+}
+console.log(getJuniorEmployees(employees));

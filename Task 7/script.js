@@ -22,3 +22,10 @@ const book = {
   title: "The Great Gatsby",
   author: "F. Scott Fitzgerald",
 };
+
+function getBookInfo(book) {
+  const bookInfo = `${book.title}, ${book.author}`;
+  console.log(bookInfo);
+  return bookInfo;
+}
+getBookInfo(book);
